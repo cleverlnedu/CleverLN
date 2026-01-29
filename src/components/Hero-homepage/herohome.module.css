@@ -1,0 +1,270 @@
+.hero {
+  padding: 0px 24px;
+  margin-top: 6rem;
+  min-width: 100px;
+}
+
+.container {
+  max-width: 1300px;
+  min-width: 100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* LEFT */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.heading {
+  font-family: var(--font-dm-serif);
+  font-size: 3.4rem;
+  line-height: 1.15;
+  color: #000;
+}
+
+.heading span {
+  color: #7dbb19;
+}
+
+.subtext {
+  font-family: var(--font-poppins);
+  color: #1f2937;
+  max-width: 520px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.cta {
+  background: linear-gradient(135deg,#5ea915,#7bcf2c);
+  color: white;
+  border: none;
+  padding: 0.9rem 2.4rem;
+  border-radius: 999px;
+  font-family: var(--font-prompt);
+  font-weight: 600;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.badge {
+  font-size: 0.85rem;
+  color: #374151;
+  font-family: var(--font-poppins);
+}
+
+/* RIGHT */
+.right {
+  position: relative;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@media (max-width: 1280px) {
+  .right {
+    transform: scale(0.8);
+    margin-bottom: 1rem;
+    height: 460px;
+  }
+ 
+  .hero{
+    margin-top: 1rem;
+    
+  }
+  .subtext{
+    font-weight: 500;
+  }
+}
+
+
+
+
+/* CIRCLES */
+.circleWrap {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  z-index: 1;
+}
+
+.outerRing {
+  background: #e0e0e0;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middleRing {
+  width: 92%;
+  height: 92%;
+  background: #bdbdbd;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 18px 30px rgba(0,0,0,0.25);
+}
+
+.innerCircle {
+  width: 88%;
+  height: 88%;
+  background: #f2fadc;
+  border-radius: 50%;
+  box-shadow: inset -8px -8px 14px rgba(0,0,0,0.08);
+}
+
+/* HERO IMAGE */
+.heroImage {
+  position: relative;
+  z-index: 3;
+}
+
+.heroImage img {
+  max-width: 420px;
+  max-height: 420px;
+  
+}
+
+/* ORBIT */
+.orbit {
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  animation: spin 28s linear infinite;
+  z-index: 6;
+}
+
+.orbitItem {
+  position: absolute;
+  animation: counterSpin 28s linear infinite;
+  z-index: 1;
+}
+.orbitItem > * {
+  transform: scale(0.7);
+  gap: 10rem;
+}
+
+
+.item1 { top: 0; left: -8%;  }
+.item2 { top: 8%; right: -8%; }
+.item3 { bottom: -5%; right: 0; }
+.item4 { bottom: 8%; left: -10%; }
+
+
+.mentorStrip p{
+   color: #000;
+}
+
+/* JOB CARD */
+.jobCard {
+  background: white;
+  padding: 10px;
+  width: 130px;
+  height: 120;
+  border-radius: 20px;
+  box-shadow: 0 25px 40px rgba(0,0,0,0.25);
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  background: #ffb26b;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.lineWide,.line,.lineSmall {
+  height: 8px;
+  background: #efefef;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.lineWide{width:100%}
+.line{width:80%}
+.lineSmall{width:50%}
+.applyBtn{height:14px;background:#6fbf2d;border-radius:999px;margin-top:10px}
+
+/* GROWTH */
+.growthCard {
+  background: #e6f2cc;
+  width: 140px;
+  height: 110px;
+  border-radius: 26px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 30px 45px rgba(0,0,0,0.25);
+}
+
+/* ANALYTICS */
+.analyticsCard {
+  background: white;
+  width: 160px;
+  height: 100px;
+  border-radius: 24px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 25px 40px rgba(0,0,0,0.25);
+}
+
+.analyticsCard circle {
+  fill:none;
+  stroke:#1a1a1a;
+  stroke-width:4;
+}
+
+.analyticsCard line {
+  stroke:#7dbb19;
+  stroke-width:4;
+}
+
+/* MENTOR STRIP */
+.mentorStrip {
+  background:#e4f1c8;
+  padding:10px 20px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  box-shadow:0 25px 40px rgba(0,0,0,0.25);
+}
+
+.avatar {
+  width:28px;
+  height:28px;
+  background:#c4c4c4;
+  border-radius:50%;
+}
+
+/* ANIMATION */
+@keyframes spin {to{transform:rotate(360deg)}}
+@keyframes counterSpin {to{transform:rotate(-360deg)}}
+
+/* MOBILE */
+@media(max-width:900px){
+  .container{grid-template-columns:1fr;text-align:center}
+  .left{align-items:center}
+}
+@media(max-width:480px){
+  .orbit{display:none}
+  .heroImage img{max-width:260px,}
+  .hero{
+    min-width: 100%;
+  }
+ 
+}
