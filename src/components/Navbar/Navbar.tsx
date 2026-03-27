@@ -47,9 +47,9 @@ const Navbar = () => {
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 26 222 45" width="120" height="28">
                         <defs>
                             <linearGradient id="cleverln-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" stopColor="#34d399" />
-                                <stop offset="50%" stopColor="#10b981" />
-                                <stop offset="100%" stopColor="#064e3b" />
+                                <stop offset="0%" stopColor="#257057" />
+                                <stop offset="50%" stopColor="#257057" />
+                                <stop offset="100%" stopColor="#063C2A" />
                             </linearGradient>
                         </defs>
                         <g fill="url(#cleverln-gradient)">
