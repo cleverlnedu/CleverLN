@@ -1,4 +1,5 @@
 'use client';
+import Link from "next/link";
 
 import styles from "./footer.module.css";
 
@@ -53,11 +54,15 @@ const Footer = () => {
           <div className={styles.column}>
             <h4>Learn</h4>
             <ul>
-              <li>Get to Know About Us</li>
-              <li>Blog</li>
-              <li>Careers</li>
-              <li>Contact</li>
-            </ul>
+  <li>Get to Know About Us</li>
+
+  <li>
+    <Link href="/blogs">Blog</Link>
+  </li>
+
+  <li>Careers</li>
+  <li>Contact</li>
+</ul>
           </div>
 
           <div className={styles.column}>
@@ -84,3 +89,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

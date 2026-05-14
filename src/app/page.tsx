@@ -1,8 +1,8 @@
-import Footer from "@/components/footer/footer";
 import Certifie from "@/components/certifie/certifie";
 import Hero from "@/components/Hero/Hero";
 import Job from "@/components/jobs/jobcard";
 import Recommend from "@/components/recomendation/recommend";
+
 
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
       <Certifie />
       <Recommend />
       <Job />
-      <Footer />
+      
     </main>
   );
 }

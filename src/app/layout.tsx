@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "@/components/Navbar/Navbar";
+import Footer from "@/components/footer/footer";
 
-
-import { Poppins, DM_Serif_Display } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Poppins,
+  DM_Serif_Display,
+  IBM_Plex_Sans_JP,
+} from "next/font/google";
 
 const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
 });
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -23,10 +30,15 @@ const geistMono = Geist_Mono({
 
 const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
-  weight: ["400"], // DM Serif Display supports 400 only
+  weight: ["400"],
   variable: "--font-dm-serif",
 });
 
+const ibm = IBM_Plex_Sans_JP({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
+  variable: "--font-ibm",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,14 +49,22 @@ export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>)
- {
+}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${dmSerif.variable} `}>
+    <html
+      lang="en"
+      className={`
+        ${poppins.variable}
+        ${geistSans.variable}
+        ${geistMono.variable}
+        ${dmSerif.variable}
+        ${ibm.variable}
+      `}
+    >
+      <body>
         <Navbar />
-        
         {children}
+        <Footer />
       </body>
     </html>
   );

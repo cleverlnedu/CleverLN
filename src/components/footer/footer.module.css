@@ -4,10 +4,6 @@
   padding-top: 0rem;
   padding-bottom: 1px;
  /*  max-height: 700px; */
-  
-
-
-  
 }
 
 /* .top {
@@ -32,7 +28,9 @@
 }
 
 
-
+.footer {
+  margin-top: 80px; /* 🔥 spacing from cards */
+}
 
 
 /* LEFT & RIGHT */
